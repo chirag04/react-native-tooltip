@@ -7,7 +7,7 @@ A react-native component from displaying tooltip. Uses UIMenuController.
 1. Run `npm install react-native-tooltip --save`
 2. Open your project in XCode, right click on `Libraries` and click `Add
    Files to "Your Project Name"` [(Screenshot)](http://url.brentvatne.ca/jQp8) then [(Screenshot)](http://url.brentvatne.ca/1gqUD).
-3. Add `libRNToolTip.a` to `Build Phases -> Link Binary With Libraries`
+3. Add `libRNToolTipMenu.a` to `Build Phases -> Link Binary With Libraries`
    [(Screenshot)](http://url.brentvatne.ca/17Xfe).
 4. Whenever you want to use it within React code now you can: `var ToolTipText = require('react-native-tooltip');`
 
