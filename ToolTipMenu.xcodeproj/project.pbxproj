@@ -1,0 +1,403 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4681C0251B05271A004D67D4 /* ToolTipMenu.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4681C0241B05271A004D67D4 /* ToolTipMenu.h */; };
+		4681C0271B05271A004D67D4 /* ToolTipMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 4681C0261B05271A004D67D4 /* ToolTipMenu.m */; };
+		4681C02D1B05271A004D67D4 /* libToolTipMenu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4681C0211B05271A004D67D4 /* libToolTipMenu.a */; };
+		469F58B71B069FF300C571E8 /* RCTToolTipText.m in Sources */ = {isa = PBXBuildFile; fileRef = 469F58B61B069FF300C571E8 /* RCTToolTipText.m */; };
+		469F58B91B06A00C00C571E8 /* RCTToolTipTextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 469F58B81B06A00C00C571E8 /* RCTToolTipTextManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4681C02E1B05271A004D67D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4681C0191B05271A004D67D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4681C0201B05271A004D67D4;
+			remoteInfo = ToolTipMenu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4681C01F1B05271A004D67D4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				4681C0251B05271A004D67D4 /* ToolTipMenu.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4681C0211B05271A004D67D4 /* libToolTipMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libToolTipMenu.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4681C0241B05271A004D67D4 /* ToolTipMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolTipMenu.h; sourceTree = "<group>"; };
+		4681C0261B05271A004D67D4 /* ToolTipMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToolTipMenu.m; sourceTree = "<group>"; };
+		4681C02C1B05271A004D67D4 /* ToolTipMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToolTipMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4681C0321B05271A004D67D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		469F58B31B069F9800C571E8 /* RCTToolTipText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTToolTipText.h; sourceTree = "<group>"; };
+		469F58B61B069FF300C571E8 /* RCTToolTipText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTToolTipText.m; sourceTree = "<group>"; };
+		469F58B81B06A00C00C571E8 /* RCTToolTipTextManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTToolTipTextManager.m; sourceTree = "<group>"; };
+		469F58BA1B06A01D00C571E8 /* RCTToolTipTextManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTToolTipTextManager.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4681C01E1B05271A004D67D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4681C0291B05271A004D67D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4681C02D1B05271A004D67D4 /* libToolTipMenu.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4681C0181B05271A004D67D4 = {
+			isa = PBXGroup;
+			children = (
+				4681C0231B05271A004D67D4 /* ToolTipMenu */,
+				4681C0301B05271A004D67D4 /* ToolTipMenuTests */,
+				4681C0221B05271A004D67D4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4681C0221B05271A004D67D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4681C0211B05271A004D67D4 /* libToolTipMenu.a */,
+				4681C02C1B05271A004D67D4 /* ToolTipMenuTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4681C0231B05271A004D67D4 /* ToolTipMenu */ = {
+			isa = PBXGroup;
+			children = (
+				4681C0241B05271A004D67D4 /* ToolTipMenu.h */,
+				4681C0261B05271A004D67D4 /* ToolTipMenu.m */,
+				469F58B31B069F9800C571E8 /* RCTToolTipText.h */,
+				469F58B61B069FF300C571E8 /* RCTToolTipText.m */,
+				469F58BA1B06A01D00C571E8 /* RCTToolTipTextManager.h */,
+				469F58B81B06A00C00C571E8 /* RCTToolTipTextManager.m */,
+			);
+			path = ToolTipMenu;
+			sourceTree = "<group>";
+		};
+		4681C0301B05271A004D67D4 /* ToolTipMenuTests */ = {
+			isa = PBXGroup;
+			children = (
+				4681C0311B05271A004D67D4 /* Supporting Files */,
+			);
+			path = ToolTipMenuTests;
+			sourceTree = "<group>";
+		};
+		4681C0311B05271A004D67D4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4681C0321B05271A004D67D4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4681C0201B05271A004D67D4 /* ToolTipMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4681C0351B05271A004D67D4 /* Build configuration list for PBXNativeTarget "ToolTipMenu" */;
+			buildPhases = (
+				4681C01D1B05271A004D67D4 /* Sources */,
+				4681C01E1B05271A004D67D4 /* Frameworks */,
+				4681C01F1B05271A004D67D4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ToolTipMenu;
+			productName = ToolTipMenu;
+			productReference = 4681C0211B05271A004D67D4 /* libToolTipMenu.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		4681C02B1B05271A004D67D4 /* ToolTipMenuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4681C0381B05271A004D67D4 /* Build configuration list for PBXNativeTarget "ToolTipMenuTests" */;
+			buildPhases = (
+				4681C0281B05271A004D67D4 /* Sources */,
+				4681C0291B05271A004D67D4 /* Frameworks */,
+				4681C02A1B05271A004D67D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4681C02F1B05271A004D67D4 /* PBXTargetDependency */,
+			);
+			name = ToolTipMenuTests;
+			productName = ToolTipMenuTests;
+			productReference = 4681C02C1B05271A004D67D4 /* ToolTipMenuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4681C0191B05271A004D67D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Chirag Jain";
+				TargetAttributes = {
+					4681C0201B05271A004D67D4 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					4681C02B1B05271A004D67D4 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 4681C01C1B05271A004D67D4 /* Build configuration list for PBXProject "ToolTipMenu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4681C0181B05271A004D67D4;
+			productRefGroup = 4681C0221B05271A004D67D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4681C0201B05271A004D67D4 /* ToolTipMenu */,
+				4681C02B1B05271A004D67D4 /* ToolTipMenuTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4681C02A1B05271A004D67D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4681C01D1B05271A004D67D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4681C0271B05271A004D67D4 /* ToolTipMenu.m in Sources */,
+				469F58B91B06A00C00C571E8 /* RCTToolTipTextManager.m in Sources */,
+				469F58B71B069FF300C571E8 /* RCTToolTipText.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4681C0281B05271A004D67D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4681C02F1B05271A004D67D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4681C0201B05271A004D67D4 /* ToolTipMenu */;
+			targetProxy = 4681C02E1B05271A004D67D4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4681C0331B05271A004D67D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4681C0341B05271A004D67D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4681C0361B05271A004D67D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"$(SRCROOT)/../node_modules/react-native/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4681C0371B05271A004D67D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"$(SRCROOT)/../node_modules/react-native/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		4681C0391B05271A004D67D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ToolTipMenuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4681C03A1B05271A004D67D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ToolTipMenuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4681C01C1B05271A004D67D4 /* Build configuration list for PBXProject "ToolTipMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4681C0331B05271A004D67D4 /* Debug */,
+				4681C0341B05271A004D67D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4681C0351B05271A004D67D4 /* Build configuration list for PBXNativeTarget "ToolTipMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4681C0361B05271A004D67D4 /* Debug */,
+				4681C0371B05271A004D67D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4681C0381B05271A004D67D4 /* Build configuration list for PBXNativeTarget "ToolTipMenuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4681C0391B05271A004D67D4 /* Debug */,
+				4681C03A1B05271A004D67D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4681C0191B05271A004D67D4 /* Project object */;
+}
