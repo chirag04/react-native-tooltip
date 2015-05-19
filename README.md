@@ -37,7 +37,7 @@ var tooltip = React.createClass({
     this.setState({input: event.nativeEvent.text});
   },
   handleFocus: function(change) {
-    ToolTipMenu.show(this.refs.input.getNodeHandle(), ['x', 'z']);
+    ToolTipMenu.show(React.findNodeHandle(this.refs.input), ['x', 'z']);
   },
   render: function() {
     return (

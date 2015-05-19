@@ -65,7 +65,7 @@ var viewConfig = {
  * ```
  */
 
-var Text = React.createClass({
+var ToolTipText = React.createClass({
 
   mixins: [Touchable.Mixin, NativeMethodsMixin],
 
@@ -202,7 +202,7 @@ var Text = React.createClass({
     props.onResponderMove = this.handleResponderMove;
     props.onResponderRelease = this.handleResponderRelease;
     props.onResponderTerminate = this.handleResponderTerminate;
-    return <RCTText {...props} />;
+    return <RCTToolTipText {...props} />;
   },
 });
 
@@ -215,6 +215,6 @@ type RectOffset = {
 
 var PRESS_RECT_OFFSET = {top: 20, left: 20, right: 20, bottom: 30};
 
-var RCTText = createReactNativeComponentClass(viewConfig);
+var RCTToolTipText = createReactNativeComponentClass(viewConfig);
 
-module.exports = Text;
+module.exports = ToolTipText;
