@@ -17,7 +17,7 @@
     "react-native",
     "react-component",
     "ios",
-    "tooltip",
+    "tooltip"
   ],
   "dependencies": {
     "react-native": "^0.4.4"
