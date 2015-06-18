@@ -85,9 +85,9 @@ var Text = React.createClass({
      */
     onPress: React.PropTypes.func,
     /**
-    * Callback that is called when the text input's text changes.   
-     */   
-    onChange: React.PropTypes.func,   
+    * Callback that is called when the text input's text changes.
+     */
+    onChange: React.PropTypes.func,
     /**
      * When true, no visual change is made when text is pressed down.  By
      * default, a gray oval highlights the text on press down.
