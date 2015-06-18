@@ -10,10 +10,15 @@
 
 RCT_EXPORT_MODULE()
 
+- (dispatch_queue_t)methodQueue
+{
+    return _bridge.uiManager.methodQueue;
+}
+
 RCT_EXPORT_METHOD(show:(NSNumber *)reactTag
                   items: (NSArray *)items)
 {
-    [self.bridge.uiManager addUIBlock:^(RCTUIManager *uiManager, RCTSparseArray *viewRegistry) {
+    [_bridge.uiManager addUIBlock:^(RCTUIManager *uiManager, RCTSparseArray *viewRegistry) {
         
         RCTToolTipText *view = viewRegistry[reactTag];
         if (!view) {

@@ -3,11 +3,14 @@
 #import "UIView+React.h"
 
 @implementation RCTToolTipText
+{
+    RCTEventDispatcher *_eventDispatcher;
+}
 
-- (instancetype)initWithEventDispatcher:(RCTEventDispatcher *)eventDispatcher
+- (id)initWithEventDispatcher:(RCTEventDispatcher *)eventDispatcher
 {
     if ((self = [super initWithFrame:CGRectZero])) {
-        self._eventDispatcher = eventDispatcher;
+        _eventDispatcher = eventDispatcher;
     }
     
     return self;
@@ -19,7 +22,7 @@
 }
 
 - (void)tappedMenuItem:(NSString *)text {
-    [self._eventDispatcher sendTextEventWithType:RCTTextEventTypeChange
+    [_eventDispatcher sendTextEventWithType:RCTTextEventTypeChange
                                         reactTag:self.reactTag
                                             text:text];
 }

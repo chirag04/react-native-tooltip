@@ -12,7 +12,9 @@
 'use strict';
 
 var NativeMethodsMixin = require('NativeMethodsMixin');
+var Platform = require('Platform');
 var React = require('React');
+var ReactInstanceMap = require('ReactInstanceMap');
 var ReactNativeViewAttributes = require('ReactNativeViewAttributes');
 var StyleSheetPropType = require('StyleSheetPropType');
 var TextStylePropTypes = require('TextStylePropTypes');
@@ -65,7 +67,7 @@ var viewConfig = {
  * ```
  */
 
-var ToolTipText = React.createClass({
+var Text = React.createClass({
 
   mixins: [Touchable.Mixin, NativeMethodsMixin],
 
@@ -83,9 +85,9 @@ var ToolTipText = React.createClass({
      */
     onPress: React.PropTypes.func,
     /**
-     * Callback that is called when the text input's text changes.
-     */
-    onChange: React.PropTypes.func,
+    * Callback that is called when the text input's text changes.   
+     */   
+    onChange: React.PropTypes.func,   
     /**
      * When true, no visual change is made when text is pressed down.  By
      * default, a gray oval highlights the text on press down.
@@ -185,6 +187,14 @@ var ToolTipText = React.createClass({
     this.props.onChange && this.props.onChange(event);
   },
 
+  getChildContext: function(): Object {
+    return {isInAParentText: true};
+  },
+
+  childContextTypes: {
+    isInAParentText: React.PropTypes.bool
+  },
+
   render: function() {
     var props = {};
     for (var key in this.props) {
@@ -202,7 +212,14 @@ var ToolTipText = React.createClass({
     props.onResponderMove = this.handleResponderMove;
     props.onResponderRelease = this.handleResponderRelease;
     props.onResponderTerminate = this.handleResponderTerminate;
-    return <RCTToolTipText {...props} />;
+
+    // TODO: Switch to use contextTypes and this.context after React upgrade
+    var context = ReactInstanceMap.get(this)._context;
+    if (context.isInAParentText) {
+      return <RCTVirtualText {...props} />;
+    } else {
+      return <RCTText {...props} />;
+    }
   },
 });
 
@@ -215,6 +232,16 @@ type RectOffset = {
 
 var PRESS_RECT_OFFSET = {top: 20, left: 20, right: 20, bottom: 30};
 
-var RCTToolTipText = createReactNativeComponentClass(viewConfig);
+var RCTText = createReactNativeComponentClass(viewConfig);
+var RCTVirtualText = RCTText;
 
-module.exports = ToolTipText;
+if (Platform.OS === 'android') {
+  RCTVirtualText = createReactNativeComponentClass({
+    validAttributes: merge(ReactNativeViewAttributes.UIView, {
+      isHighlighted: true,
+    }),
+    uiViewClassName: 'RCTVirtualText',
+  });
+}
+
+module.exports = Text;
