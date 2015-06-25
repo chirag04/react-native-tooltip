@@ -1,6 +1,6 @@
 {
   "name": "react-native-tooltip",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A react-native wrapper for showing tooltips",
   "main": "ToolTipText.ios.js",
   "author": {
@@ -19,7 +19,7 @@
     "ios",
     "tooltip"
   ],
-  "dependencies": {
-    "react-native": "^0.5.0"
+  "peerDependencies": {
+    "react-native": ">= 0.4 || 0.7.0-rc1"
   }
 }
