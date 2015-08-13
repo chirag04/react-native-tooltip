@@ -24,7 +24,8 @@
 - (void)tappedMenuItem:(NSString *)text {
     [_eventDispatcher sendTextEventWithType:RCTTextEventTypeChange
                                         reactTag:self.reactTag
-                                            text:text];
+                                            text:text
+                                      eventCount:0];
 }
 
 - (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
