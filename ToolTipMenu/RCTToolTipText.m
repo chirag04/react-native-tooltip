@@ -5,6 +5,7 @@
 @implementation RCTToolTipText
 {
     RCTEventDispatcher *_eventDispatcher;
+    NSInteger _nativeEventCount;
 }
 
 - (id)initWithEventDispatcher:(RCTEventDispatcher *)eventDispatcher
@@ -22,10 +23,11 @@
 }
 
 - (void)tappedMenuItem:(NSString *)text {
+    _nativeEventCount++;
     [_eventDispatcher sendTextEventWithType:RCTTextEventTypeChange
                                         reactTag:self.reactTag
                                             text:text
-                                      eventCount:0];
+                                      eventCount:_nativeEventCount];
 }
 
 - (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
