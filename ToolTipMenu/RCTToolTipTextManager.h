@@ -1,5 +1,5 @@
-#import "RCTTextManager.h"
+#import "RCTViewManager.h"
 
-@interface RCTToolTipTextManager : RCTTextManager
+@interface RCTToolTipTextManager : RCTViewManager
 
 @end

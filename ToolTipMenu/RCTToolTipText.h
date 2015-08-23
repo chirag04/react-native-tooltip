@@ -1,9 +1,9 @@
 #import <UIKit/UIKit.h>
-#import "RCTText.h"
+#import "RCTView.h"
 
 @class RCTEventDispatcher;
 
-@interface RCTToolTipText : RCTText
+@interface RCTToolTipText : RCTView
 
 - (void)tappedMenuItem:(NSString *)text;
 
