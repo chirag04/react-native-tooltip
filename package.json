@@ -1,6 +1,6 @@
 {
   "name": "react-native-tooltip",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "A react-native wrapper for showing tooltips",
   "main": "ToolTipText.ios.js",
   "author": {
