@@ -27,6 +27,7 @@
     [_eventDispatcher sendTextEventWithType:RCTTextEventTypeChange
                                         reactTag:self.reactTag
                                             text:text
+                                            key:nil
                                       eventCount:_nativeEventCount];
 }
 
