@@ -17,6 +17,9 @@
     return self;
 }
 
+RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
+RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:(NSCoder *)aDecoder)
+
 - (BOOL) canBecomeFirstResponder
 {
     return YES;
