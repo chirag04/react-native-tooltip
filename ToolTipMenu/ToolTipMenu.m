@@ -2,7 +2,6 @@
 
 #import "RCTBridge.h"
 #import "RCTToolTipText.h"
-#import "RCTSparseArray.h"
 #import "RCTUIManager.h"
 
 @implementation ToolTipMenu
