@@ -18,38 +18,40 @@ var React = require('react-native');
 var {
   AppRegistry,
   StyleSheet,
-  Text,
   TouchableHighlight,
   PixelRatio,
+  Text,
+  AlertIOS,
   View,
 } = React;
 
-var ToolTipMenu = require('NativeModules').ToolTipMenu;
 var ToolTipText = require('react-native-tooltip');
 
 var tooltip = React.createClass({
-  getInitialState: function() {
-    return {
-      input: 'chirag',
-    }
+
+  handleActionSelected: function(command) {
+    AlertIOS.alert(command + ' has been selected.');
   },
-  handleChange: function(event) {
-    this.setState({input: event.nativeEvent.text});
-  },
-  handleFocus: function(change) {
-    ToolTipMenu.show(React.findNodeHandle(this.refs.input), ['x', 'z']);
-  },
+
   render: function() {
     return (
       <View style={styles.container}>
         <View style={styles.textinputContainer}>
           <ToolTipText
-            suppressHighlighting={true}
-            onChange={this.handleChange}
-            onPress={this.handleFocus}
+            actions={[
+              {text: 'x', command: 'x_command'},
+              {text: 'z', command: 'z_command'}
+            ]}
+            onActionSelected={this.handleActionSelected}
+            longPress={true}
+            underlayColor={'transparent'}
             ref={'input'}
             style={styles.textinput}
-          >{this.state.input}</ToolTipText>
+          >
+            <Text>
+              {'chirag'}
+            </Text>
+          </ToolTipText>
         </View>
       </View>
     );
@@ -76,7 +78,6 @@ var styles = StyleSheet.create({
     borderRadius: 5,
     borderColor: '#c7c7cc',
     padding: 2,
-    fontSize: 14,
     backgroundColor: 'white',
   },
 });
