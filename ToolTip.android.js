@@ -2,10 +2,10 @@
 
 var warning = require('warning');
 
-var ToolTipText = {
+var ToolTip = {
   test: function() {
     warning("Not yet implemented for Android.");
   }
 };
 
-module.exports = ToolTipText;
+module.exports = ToolTip;
