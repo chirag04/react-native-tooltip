@@ -108,4 +108,4 @@ It is also possible to open the menu programmatically, by calling `this.refs.the
 ![Demo gif](https://github.com/chirag04/react-native-tooltip/blob/master/screenshot.png)
 
 ### Special thanks
-Special thanks to @jrichardlai for refactoring the api and make it awesome.
+Special thanks to [jrichardlai](https://github.com/jrichardlai) for refactoring the api and make it awesome.
