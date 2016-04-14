@@ -70,7 +70,7 @@ var ViewClass = React.createClass({
 
   render: function() {
     return (
-      <RCTToolTipText ref='toolTipText' onChange={this.handleToolTipTextChange} style={this.props.style}>>
+      <RCTToolTipText ref='toolTipText' onChange={this.handleToolTipTextChange} style={this.props.style}>
         <TouchableHighlight
           {...this.getTouchableHighlightProps()}
         >
