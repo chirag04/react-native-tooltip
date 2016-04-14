@@ -50,6 +50,12 @@ var ViewClass = React.createClass({
     } else {
       props.onPress = this.showMenu;
     }
+	
+	// Override the style for the touchable highlight to fill the size of the tooltip container.
+    props.style = {
+        flex: 1,
+        alignSelf: 'stretch'
+    };
 
     return props;
   },
@@ -64,7 +70,7 @@ var ViewClass = React.createClass({
 
   render: function() {
     return (
-      <RCTToolTipText ref='toolTipText' onChange={this.handleToolTipTextChange}>
+      <RCTToolTipText ref='toolTipText' onChange={this.handleToolTipTextChange} style={this.props.style}>>
         <TouchableHighlight
           {...this.getTouchableHighlightProps()}
         >
