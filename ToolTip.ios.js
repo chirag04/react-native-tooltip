@@ -5,9 +5,9 @@ var {
   TouchableHighlight,
   View,
   NativeModules,
+  findNodeHandle,
 } = require('react-native');
 var React = require('react');
-var findNodeHandle = require('react-native/Libraries/ReactNative/findNodeHandle');
 var ToolTipMenu = NativeModules.ToolTipMenu;
 var RCTToolTipText = requireNativeComponent('RCTToolTipText', null);
 
