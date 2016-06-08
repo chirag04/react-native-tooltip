@@ -32,14 +32,15 @@ RCT_EXPORT_METHOD(show:(nonnull NSNumber *)reactTag
     UIMenuController *menuCont = [UIMenuController sharedMenuController];
     [menuCont setTargetRect:view.frame inView:view.superview];
 
-    NSDictionary *dict = @{
-      @"left" : @(UIMenuControllerArrowLeft),
-      @"right" : @(UIMenuControllerArrowRight),
-      @"up" : @(UIMenuControllerArrowUp),
-      @"down" : @(UIMenuControllerArrowDown)
-    };
-
-    menuCont.arrowDirection = dict[arrowDirection];
+    if([arrowDirection isEqualToString: @"up"]){
+      menuCont.arrowDirection = UIMenuControllerArrowUp;
+    }else if ([arrowDirection isEqualToString: @"right"]){
+      menuCont.arrowDirection = UIMenuControllerArrowRight;
+    }else if ([arrowDirection isEqualToString: @"left"]) {
+      menuCont.arrowDirection = UIMenuControllerArrowLeft;
+    } else {
+      menuCont.arrowDirection = UIMenuControllerArrowDown;
+    }
     menuCont.menuItems = menuItems;
     [menuCont setMenuVisible:YES animated:YES];
 }
