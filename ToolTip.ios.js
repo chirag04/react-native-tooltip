@@ -16,13 +16,14 @@ var propTypes = {
     text: React.PropTypes.string.isRequired,
     onPress: React.PropTypes.func,
   })),
+  arrowDirection: React.PropTypes.string,
   longPress: React.PropTypes.bool,
   ...TouchableHighlight.propTypes,
 };
 
 var ViewClass = React.createClass({
   showMenu: function() {
-    ToolTipMenu.show(findNodeHandle(this.refs.toolTipText), this.getOptionTexts());
+    ToolTipMenu.show(findNodeHandle(this.refs.toolTipText), this.getOptionTexts(), this.props.arrowDirection || 'down');
   },
 
   getOptionTexts: function() {

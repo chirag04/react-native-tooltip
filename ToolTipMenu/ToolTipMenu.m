@@ -16,7 +16,8 @@ RCT_EXPORT_MODULE()
 }
 
 RCT_EXPORT_METHOD(show:(nonnull NSNumber *)reactTag
-                  items: (NSArray *)items)
+                  items: (NSArray *)items
+                  arrowDirection: (NSString *)arrowDirection)
 {
     UIView *view = [self.bridge.uiManager viewForReactTag:reactTag];
     NSArray *buttons = items;
@@ -30,7 +31,15 @@ RCT_EXPORT_METHOD(show:(nonnull NSNumber *)reactTag
     [view becomeFirstResponder];
     UIMenuController *menuCont = [UIMenuController sharedMenuController];
     [menuCont setTargetRect:view.frame inView:view.superview];
-    menuCont.arrowDirection = UIMenuControllerArrowDown;
+
+    NSDictionary *dict = @{
+      @"left" : @(UIMenuControllerArrowLeft),
+      @"right" : @(UIMenuControllerArrowRight),
+      @"up" : @(UIMenuControllerArrowUp),
+      @"down" : @(UIMenuControllerArrowDown)
+    };
+
+    menuCont.arrowDirection = dict[arrowDirection];
     menuCont.menuItems = menuItems;
     [menuCont setMenuVisible:YES animated:YES];
 }
