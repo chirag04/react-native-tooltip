@@ -23,9 +23,9 @@ var propTypes = {
 
 var ViewClass = React.createClass({
   getDefaultProps: function() {
-      return {
-        arrowDirection: 'down'
-      };
+    return {
+      arrowDirection: 'down'
+    };
   },
 
   showMenu: function() {
