@@ -16,7 +16,7 @@ var propTypes = {
     text: React.PropTypes.string.isRequired,
     onPress: React.PropTypes.func,
   })),
-  arrowDirection: React.PropTypes.string,
+  arrowDirection: React.PropTypes.oneOf(['up', 'down', 'left', 'right']),
   longPress: React.PropTypes.bool,
   ...TouchableHighlight.propTypes,
 };
