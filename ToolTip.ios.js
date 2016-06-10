@@ -22,8 +22,14 @@ var propTypes = {
 };
 
 var ViewClass = React.createClass({
+  getDefaultProps: function() {
+      return {
+        arrowDirection: 'down'
+      };
+  },
+
   showMenu: function() {
-    ToolTipMenu.show(findNodeHandle(this.refs.toolTipText), this.getOptionTexts(), this.props.arrowDirection || 'down');
+    ToolTipMenu.show(findNodeHandle(this.refs.toolTipText), this.getOptionTexts(), this.props.arrowDirection);
   },
 
   getOptionTexts: function() {
