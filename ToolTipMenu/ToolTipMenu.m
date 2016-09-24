@@ -45,10 +45,7 @@ RCT_EXPORT_METHOD(show:(nonnull NSNumber *)reactTag
     [menuCont setMenuVisible:YES animated:YES];
 }
 
-RCT_EXPORT_METHOD(hide:(nonnull NSNumber *)reactTag){
-    
-    UIView *view = [self.bridge.uiManager viewForReactTag:reactTag];
-    [view becomeFirstResponder];
+RCT_EXPORT_METHOD(hide){   
     UIMenuController *menuCont = [UIMenuController sharedMenuController];
     [menuCont setMenuVisible:NO animated:NO];
 }
