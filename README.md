@@ -105,6 +105,7 @@ AppRegistry.registerComponent('tooltip', () => tooltip);
 ### Note
 
 It is also possible to open the menu programmatically, by calling `this.refs.theToolTip.showMenu();` ( `theToolTip` being the reference of the component).
+To hide menu `this.refs.theToolTip.hideMenu();` (Though tooltip hides by itself, while using with drawer on specific gesture tooltip does not hide by default.)
 
 ## Here is how it looks:
 ![Demo gif](https://github.com/chirag04/react-native-tooltip/blob/master/screenshot.png)

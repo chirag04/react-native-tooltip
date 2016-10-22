@@ -45,4 +45,9 @@ RCT_EXPORT_METHOD(show:(nonnull NSNumber *)reactTag
     [menuCont setMenuVisible:YES animated:YES];
 }
 
+RCT_EXPORT_METHOD(hide){   
+    UIMenuController *menuCont = [UIMenuController sharedMenuController];
+    [menuCont setMenuVisible:NO animated:NO];
+}
+
 @end

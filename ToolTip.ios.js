@@ -31,7 +31,10 @@ var ViewClass = React.createClass({
   showMenu: function() {
     ToolTipMenu.show(findNodeHandle(this.refs.toolTipText), this.getOptionTexts(), this.props.arrowDirection);
   },
-
+  hideMenu: function() {
+    ToolTipMenu.hide();
+  },
+  
   getOptionTexts: function() {
     return this.props.actions.map((option) => option.text);
   },
