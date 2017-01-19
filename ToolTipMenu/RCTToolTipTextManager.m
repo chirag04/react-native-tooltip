@@ -1,7 +1,7 @@
 #import "RCTToolTipTextManager.h"
 
 #import "RCTToolTipText.h"
-#import "RCTBridge.h"
+#import <React/RCTBridge.h>
 
 @implementation RCTToolTipTextManager
 
