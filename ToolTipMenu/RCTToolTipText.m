@@ -1,6 +1,6 @@
 #import "RCTToolTipText.h"
-#import "RCTEventDispatcher.h"
-#import "UIView+React.h"
+#import <React/RCTEventDispatcher.h>
+#import <React/UIView+React.h>
 
 @implementation RCTToolTipText
 {
