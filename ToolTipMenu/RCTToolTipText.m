@@ -34,6 +34,16 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:(NSCoder *)aDecoder)
                                       eventCount:_nativeEventCount];
 }
 
+- (void)willHideMenu:(NSNotification *)notification {
+    _nativeEventCount++;
+    [_eventDispatcher sendTextEventWithType:RCTTextEventTypeBlur
+                                   reactTag:self.reactTag
+                                       text:nil
+                                        key:nil
+                                 eventCount:_nativeEventCount];
+
+}
+
 - (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
     NSString *sel = NSStringFromSelector(action);
     NSRange match = [sel rangeOfString:@"magic_"];

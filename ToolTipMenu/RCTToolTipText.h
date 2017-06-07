@@ -7,6 +7,8 @@
 
 - (void)tappedMenuItem:(NSString *)text;
 
+- (void)willHideMenu:(NSNotification *)notification;
+
 - (instancetype)initWithEventDispatcher:(RCTEventDispatcher *)eventDispatcher NS_DESIGNATED_INITIALIZER;
 
 @end

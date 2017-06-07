@@ -24,15 +24,19 @@ var propTypes = {
 var ViewClass = React.createClass({
   getDefaultProps: function() {
     return {
-      arrowDirection: 'down'
+      arrowDirection: 'down',
+      onHide: () => true,
+      onShow: () => true
     };
   },
 
   showMenu: function() {
     ToolTipMenu.show(findNodeHandle(this.refs.toolTipText), this.getOptionTexts(), this.props.arrowDirection);
+    this.props.onShow();
   },
   hideMenu: function() {
     ToolTipMenu.hide();
+    this.props.onHide();
   },
   
   getOptionTexts: function() {
@@ -72,9 +76,13 @@ var ViewClass = React.createClass({
     }
   },
 
+  handleBlurToolTip: function() {
+      this.hideMenu();
+  },
+
   render: function() {
     return (
-      <RCTToolTipText ref='toolTipText' onChange={this.handleToolTipTextChange}>
+      <RCTToolTipText ref='toolTipText' onChange={this.handleToolTipTextChange} onBlur={this.handleBlurToolTip}>
         <TouchableHighlight
           {...this.getTouchableHighlightProps()}
         >
