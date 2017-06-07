@@ -30,7 +30,7 @@ RCT_EXPORT_METHOD(show:(nonnull NSNumber *)reactTag
     UIMenuController *menuCont = [UIMenuController sharedMenuController];
     [menuCont setTargetRect:view.frame inView:view.superview];
 
-    [[NSNotificationCenter defaultCenter] addObserver:view selector:@selector(willHideMenu:) name:UIMenuControllerWillHideMenuNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:view selector:@selector(didHideMenu:) name:UIMenuControllerDidHideMenuNotification object:nil];
 
     
     if([arrowDirection isEqualToString: @"up"]){

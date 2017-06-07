@@ -34,7 +34,7 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:(NSCoder *)aDecoder)
                                       eventCount:_nativeEventCount];
 }
 
-- (void)willHideMenu:(NSNotification *)notification {
+- (void)didHideMenu:(NSNotification *)notification {
     _nativeEventCount++;
     [_eventDispatcher sendTextEventWithType:RCTTextEventTypeBlur
                                    reactTag:self.reactTag
