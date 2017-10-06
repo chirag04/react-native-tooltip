@@ -13,6 +13,8 @@ import {
 const ToolTipMenu = NativeModules.ToolTipMenu;
 const RCTToolTipText = requireNativeComponent('RCTToolTipText', null);
 
+export let isToolTipShowing = false;
+
 export default class ToolTip extends PureComponent {
     static propTypes = {
         actions: PropTypes.arrayOf(PropTypes.shape({
@@ -32,11 +34,13 @@ export default class ToolTip extends PureComponent {
 
     showMenu = () => {
         ToolTipMenu.show(findNodeHandle(this.refs.toolTipText), this.getOptionTexts(), this.props.arrowDirection);
+        isToolTipShowing = true;
         this.props.onShow();
     };
 
     hideMenu = () => {
         ToolTipMenu.hide();
+        isToolTipShowing = false;
         this.props.onHide();
     };
 
