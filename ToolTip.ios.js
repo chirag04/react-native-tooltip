@@ -1,92 +1,100 @@
 'use strict';
 
-var {
+import React, {PureComponent} from 'react';
+import PropTypes from 'prop-types';
+import {
   requireNativeComponent,
   TouchableHighlight,
   View,
   NativeModules,
   findNodeHandle,
-} = require('react-native');
-var React = require('react');
-var ToolTipMenu = NativeModules.ToolTipMenu;
-var RCTToolTipText = requireNativeComponent('RCTToolTipText', null);
+} from 'react-native';
 
-var propTypes = {
-  actions: React.PropTypes.arrayOf(React.PropTypes.shape({
-    text: React.PropTypes.string.isRequired,
-    onPress: React.PropTypes.func,
-  })),
-  arrowDirection: React.PropTypes.oneOf(['up', 'down', 'left', 'right']),
-  longPress: React.PropTypes.bool,
-  ...TouchableHighlight.propTypes,
-};
+const ToolTipMenu = NativeModules.ToolTipMenu;
+const RCTToolTipText = requireNativeComponent('RCTToolTipText', null);
 
-var ViewClass = React.createClass({
-  getDefaultProps: function() {
-    return {
-      arrowDirection: 'down'
+export let isToolTipShowing = false;
+
+export default class ToolTip extends PureComponent {
+    static propTypes = {
+        actions: PropTypes.arrayOf(PropTypes.shape({
+            text: PropTypes.string.isRequired,
+            onPress: PropTypes.func
+        })),
+        arrowDirection: PropTypes.oneOf(['up', 'down', 'left', 'right']),
+        longPress: PropTypes.bool,
+        ...TouchableHighlight.propTypes
     };
-  },
 
-  showMenu: function() {
-    ToolTipMenu.show(findNodeHandle(this.refs.toolTipText), this.getOptionTexts(), this.props.arrowDirection);
-  },
-  hideMenu: function() {
-    ToolTipMenu.hide();
-  },
-  
-  getOptionTexts: function() {
-    return this.props.actions.map((option) => option.text);
-  },
+    static defaultProps = {
+        arrowDirection: 'down',
+        onHide: () => true,
+        onShow: () => true
+    };
 
-  // Assuming there is no actions with the same text
-  getCallback: function(optionText) {
-    var selectedOption = this.props.actions.find((option) => option.text === optionText);
+    showMenu = () => {
+        ToolTipMenu.show(findNodeHandle(this.refs.toolTipText), this.getOptionTexts(), this.props.arrowDirection);
+        isToolTipShowing = true;
+        this.props.onShow();
+    };
 
-    if (selectedOption) {
-      return selectedOption.onPress;
+    hideMenu = () => {
+        ToolTipMenu.hide();
+        isToolTipShowing = false;
+        this.props.onHide();
+    };
+
+    getOptionTexts = () => {
+        return this.props.actions.map((option) => option.text);
+    };
+
+    // Assuming there is no actions with the same text
+    getCallback = (optionText) => {
+        const selectedOption = this.props.actions.find((option) => option.text === optionText);
+
+        if (selectedOption) {
+            return selectedOption.onPress;
+        }
+
+        return null;
+    };
+
+    getTouchableHighlightProps = () => {
+        const props = {};
+
+        Object.keys(TouchableHighlight.propTypes).forEach((key) => props[key] = this.props[key]);
+
+        if (this.props.longPress) {
+            props.onLongPress = this.showMenu;
+        } else {
+            props.onPress = this.showMenu;
+        }
+
+        return props;
+    };
+
+    handleToolTipTextChange = (event) => {
+        const callback = this.getCallback(event.nativeEvent.text);
+        if (callback) {
+            callback(event);
+        }
+    };
+
+    handleBlurToolTip = () => {
+        this.hideMenu();
+    };
+
+    render() {
+        return (
+            <RCTToolTipText ref='toolTipText' onChange={this.handleToolTipTextChange} onBlur={this.handleBlurToolTip}>
+              <TouchableHighlight
+                  {...this.getTouchableHighlightProps()}
+              >
+                <View>
+                    {this.props.children}
+                </View>
+              </TouchableHighlight>
+            </RCTToolTipText>
+        );
     }
-
-    return null;
-  },
-
-  getTouchableHighlightProps: function() {
-    var props = {};
-
-    Object.keys(TouchableHighlight.propTypes).forEach((key) => props[key] = this.props[key]);
-
-    if (this.props.longPress) {
-      props.onLongPress = this.showMenu;
-    } else {
-      props.onPress = this.showMenu;
-    }
-
-    return props;
-  },
-
-  handleToolTipTextChange: function(event) {
-    var callback = this.getCallback(event.nativeEvent.text);
-
-    if (callback) {
-      callback(event);
-    }
-  },
-
-  render: function() {
-    return (
-      <RCTToolTipText ref='toolTipText' onChange={this.handleToolTipTextChange}>
-        <TouchableHighlight
-          {...this.getTouchableHighlightProps()}
-        >
-          <View>
-            {this.props.children}
-          </View>
-        </TouchableHighlight>
-      </RCTToolTipText>
-    );
-  }
-});
-
-ViewClass.propTypes = propTypes;
-
-module.exports = ViewClass;
+}
