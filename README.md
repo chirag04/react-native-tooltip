@@ -9,7 +9,7 @@ A react-native component from displaying tooltip. Uses UIMenuController.
    Files to "Your Project Name"` [(Screenshot)](http://url.brentvatne.ca/jQp8) then [(Screenshot)](http://url.brentvatne.ca/1gqUD).
 3. Add `libRNToolTipMenu.a` to `Build Phases -> Link Binary With Libraries`
    [(Screenshot)](http://url.brentvatne.ca/17Xfe).
-4. Whenever you want to use it within React code: `var ToolTip = require('react-native-tooltip');`
+4. Whenever you want to use it within React code: `import ToolTip from 'react-native-tooltip';`
 
 ## Usage
 
@@ -32,24 +32,26 @@ You can see the list on the react native [website](https://facebook.github.io/re
 ### Example
 
 ```javascript
-var React = require('react-native');
-var {
+import React from 'react';
+import {
   AppRegistry,
   StyleSheet,
   PixelRatio,
   View,
   Text,
-} = React;
+} from 'react-native';
 
-var ToolTip = require('react-native-tooltip');
+import ToolTip from 'react-native-tooltip';
 
-var tooltip = React.createClass({
-  getInitialState: function() {
-    return {
+class tooltip extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
       input: 'chirag',
-    }
-  },
-  render: function() {
+    };
+  }
+  render() {
     return (
       <View style={styles.container}>
         <View style={styles.textinputContainer}>
@@ -72,7 +74,7 @@ var tooltip = React.createClass({
       </View>
     );
   }
-});
+}
 
 var styles = StyleSheet.create({
   container: {
