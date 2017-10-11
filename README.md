@@ -40,10 +40,11 @@ var {
   View,
   Text,
 } = React;
+var createReactClass = require('create-react-class');
 
 var ToolTip = require('react-native-tooltip');
 
-var tooltip = React.createClass({
+var tooltip = createReactClass({
   getInitialState: function() {
     return {
       input: 'chirag',
