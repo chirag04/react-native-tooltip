@@ -11,8 +11,9 @@ var {
   Text,
   View,
 } = React;
+var createReactClass = require('create-react-class');
 
-var Example = React.createClass({
+var Example = createReactClass({
   render: function() {
     return (
       <View style={styles.container}>
@@ -27,7 +28,7 @@ var Example = React.createClass({
         </Text>
       </View>
     );
-  }
+  },
 });
 
 var styles = StyleSheet.create({

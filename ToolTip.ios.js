@@ -8,23 +8,25 @@ var {
   findNodeHandle,
 } = require('react-native');
 var React = require('react');
+var PropTypes = require('prop-types');
+var createReactClass = require('create-react-class');
 var ToolTipMenu = NativeModules.ToolTipMenu;
 var RCTToolTipText = requireNativeComponent('RCTToolTipText', null);
 
 var propTypes = {
-  actions: React.PropTypes.arrayOf(React.PropTypes.shape({
-    text: React.PropTypes.string.isRequired,
-    onPress: React.PropTypes.func,
+  actions: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    onPress: PropTypes.func,
   })),
-  arrowDirection: React.PropTypes.oneOf(['up', 'down', 'left', 'right']),
-  longPress: React.PropTypes.bool,
+  arrowDirection: PropTypes.oneOf(['up', 'down', 'left', 'right']),
+  longPress: PropTypes.bool,
   ...TouchableHighlight.propTypes,
 };
 
-var ViewClass = React.createClass({
+var ViewClass = createReactClass({
   getDefaultProps: function() {
     return {
-      arrowDirection: 'down'
+      arrowDirection: 'down',
     };
   },
 
@@ -84,7 +86,7 @@ var ViewClass = React.createClass({
         </TouchableHighlight>
       </RCTToolTipText>
     );
-  }
+  },
 });
 
 ViewClass.propTypes = propTypes;
