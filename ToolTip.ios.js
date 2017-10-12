@@ -1,18 +1,18 @@
 'use strict';
 
-var {
+const {
   requireNativeComponent,
   TouchableHighlight,
   View,
   NativeModules,
   findNodeHandle,
 } = require('react-native');
-var PropTypes = require('prop-types');
-var React = require('react');
-var ToolTipMenu = NativeModules.ToolTipMenu;
-var RCTToolTipText = requireNativeComponent('RCTToolTipText', null);
+const PropTypes = require('prop-types');
+const React = require('react');
+const ToolTipMenu = NativeModules.ToolTipMenu;
+const RCTToolTipText = requireNativeComponent('RCTToolTipText', null);
 
-var propTypes = {
+const propTypes = {
   actions: PropTypes.arrayOf(PropTypes.shape({
     text: PropTypes.string.isRequired,
     onPress: PropTypes.func,
