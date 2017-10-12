@@ -1,11 +1,11 @@
 'use strict';
 
-var warning = require('warning');
+const warning = require('warning');
 
-var ToolTip = {
-  test: function() {
+const ToolTip = {
+  test() {
     warning("Not yet implemented for Android.");
-  }
+  },
 };
 
 module.exports = ToolTip;
