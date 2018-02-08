@@ -41,7 +41,7 @@ import {
   Text,
 } from 'react-native';
 
-import ToolTip from 'react-native-tooltip';
+import ToolTip, {isToolTipVisible} from 'react-native-tooltip';
 
 export default class MyToolTip extends React.Component {
     state = {
@@ -65,7 +65,7 @@ export default class MyToolTip extends React.Component {
     };
     
     isTooltipVisible = () => {
-        console.log('tooltip visible', this.refs.tooltip.isToolTipVisible);
+        console.log('tooltip visible', isToolTipVisible);
     };
     
     render() {
