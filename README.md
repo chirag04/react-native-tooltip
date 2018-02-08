@@ -32,49 +32,66 @@ You can see the list on the react native [website](https://facebook.github.io/re
 ### Example
 
 ```javascript
-var React = require('react-native');
-var {
+import React from 'react';
+import {
   AppRegistry,
   StyleSheet,
   PixelRatio,
   View,
   Text,
-} = React;
+} from 'react-native';
 
-var ToolTip = require('react-native-tooltip');
+import ToolTip from 'react-native-tooltip';
 
-var tooltip = React.createClass({
-  getInitialState: function() {
-    return {
-      input: 'chirag',
+export default class MyToolTip extends React.Component {
+    state = {
+        input: 'chirag'
+    };
+    
+    handleCopyPress = () => {
+        AlertIOS.alert(`Copy has been pressed!`);
+    };
+    
+    handleOtherPress = () => {
+        AlertIOS.alert(`Other has been pressed!`);
+    };
+    
+    handleHide = () => {
+        console.log('Tooltip did hide');
+    };
+    
+    handleShow = () => {
+        console.log('tooltip did show');
+    };
+    
+    isTooltipVisible = () => {
+        console.log('tooltip visible', this.refs.tooltip.isToolTipVisible);
+    };
+    
+    render() {
+        return (
+          <View style={{flex: 1, justifyContent: 'center'}}>
+            <ToolTip
+              ref='tooltip'
+              actions={[
+                {text: 'Copy', onPress: this.handleCopyPress },
+                {text: 'Other', onPress: this.handleOtherPress }
+              ]}
+              onHide={this.handleHide}
+              onShow={this.handleShow}
+              underlayColor={'blue'}
+              style={styles.selectedName}
+            >
+              <Text style={styles.welcome}>
+                Press Here.
+              </Text>
+            </ToolTip>
+          </View>
+        );
     }
-  },
-  render: function() {
-    return (
-      <View style={styles.container}>
-        <View style={styles.textinputContainer}>
-          <ToolTip
-            ref='theToolTip'
-            actions={[
-              {text: 'x', onPress: () => { this.setState({input: 'x pressed'}) }},
-              {text: 'y', onPress: () => { this.setState({input: 'y pressed'}) }}
-            ]}
-            underlayColor='transparent'
-            longPress={true}
-            arrowDirection='down'
-            style={styles.textinput}
-          >
-            <Text>
-              {this.state.input}
-            </Text>
-          </ToolTip>
-        </View>
-      </View>
-    );
-  }
-});
+}
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
