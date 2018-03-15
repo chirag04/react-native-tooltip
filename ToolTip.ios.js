@@ -19,7 +19,7 @@ export default class ToolTip extends PureComponent {
             text: PropTypes.string.isRequired,
             onPress: PropTypes.func
         })),
-        arrowDirection: PropTypes.oneOf(['up', 'down', 'left', 'right']),
+        arrowDirection: PropTypes.oneOf(['up', 'down', 'left', 'right', 'default']),
         longPress: PropTypes.bool,
         onHide: PropTypes.func,
         onShow: PropTypes.func,
@@ -27,7 +27,7 @@ export default class ToolTip extends PureComponent {
     };
 
     static defaultProps = {
-        arrowDirection: 'down',
+        arrowDirection: 'default',
         onHide: () => true,
         onShow: () => true
     };
