@@ -17,7 +17,7 @@ A react-native component from displaying tooltip. Uses UIMenuController.
 
 - `actions`: Array of actions `[{text: 'Copy', onPress: () => Clipboard.set(this.someValue) }]`
 - `longPress`: Boolean indicating if the tooltip should be showing on longPress, false by default.
-- `arrowDirection`: String indicating the direction of the tooltip arrow. Possible values are: `up`, `down`, `left`, and `right`. Default is `down`.
+- `arrowDirection`: String indicating the direction of the tooltip arrow. Possible values are: `up`, `down`, `left`, `right`, and `default`. Default is `default`, which means to point up or down at the object of focus based on its location on the screen.
 
 #### Props from TouchableHighlight.propTypes
 
