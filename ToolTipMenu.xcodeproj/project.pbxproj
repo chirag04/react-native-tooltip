@@ -9,20 +9,9 @@
 /* Begin PBXBuildFile section */
 		4681C0251B05271A004D67D4 /* ToolTipMenu.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4681C0241B05271A004D67D4 /* ToolTipMenu.h */; };
 		4681C0271B05271A004D67D4 /* ToolTipMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 4681C0261B05271A004D67D4 /* ToolTipMenu.m */; };
-		4681C02D1B05271A004D67D4 /* libToolTipMenu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4681C0211B05271A004D67D4 /* libToolTipMenu.a */; };
 		469F58B71B069FF300C571E8 /* RCTToolTipText.m in Sources */ = {isa = PBXBuildFile; fileRef = 469F58B61B069FF300C571E8 /* RCTToolTipText.m */; };
 		469F58B91B06A00C00C571E8 /* RCTToolTipTextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 469F58B81B06A00C00C571E8 /* RCTToolTipTextManager.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		4681C02E1B05271A004D67D4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4681C0191B05271A004D67D4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4681C0201B05271A004D67D4;
-			remoteInfo = ToolTipMenu;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		4681C01F1B05271A004D67D4 /* CopyFiles */ = {
@@ -41,7 +30,6 @@
 		4681C0211B05271A004D67D4 /* libToolTipMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libToolTipMenu.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4681C0241B05271A004D67D4 /* ToolTipMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolTipMenu.h; sourceTree = "<group>"; };
 		4681C0261B05271A004D67D4 /* ToolTipMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToolTipMenu.m; sourceTree = "<group>"; };
-		4681C02C1B05271A004D67D4 /* ToolTipMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToolTipMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4681C0321B05271A004D67D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		469F58B31B069F9800C571E8 /* RCTToolTipText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTToolTipText.h; sourceTree = "<group>"; };
 		469F58B61B069FF300C571E8 /* RCTToolTipText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTToolTipText.m; sourceTree = "<group>"; };
@@ -54,14 +42,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4681C0291B05271A004D67D4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4681C02D1B05271A004D67D4 /* libToolTipMenu.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				4681C0211B05271A004D67D4 /* libToolTipMenu.a */,
-				4681C02C1B05271A004D67D4 /* ToolTipMenuTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,24 +114,6 @@
 			productReference = 4681C0211B05271A004D67D4 /* libToolTipMenu.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		4681C02B1B05271A004D67D4 /* ToolTipMenuTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4681C0381B05271A004D67D4 /* Build configuration list for PBXNativeTarget "ToolTipMenuTests" */;
-			buildPhases = (
-				4681C0281B05271A004D67D4 /* Sources */,
-				4681C0291B05271A004D67D4 /* Frameworks */,
-				4681C02A1B05271A004D67D4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4681C02F1B05271A004D67D4 /* PBXTargetDependency */,
-			);
-			name = ToolTipMenuTests;
-			productName = ToolTipMenuTests;
-			productReference = 4681C02C1B05271A004D67D4 /* ToolTipMenuTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -163,9 +124,6 @@
 				ORGANIZATIONNAME = "Chirag Jain";
 				TargetAttributes = {
 					4681C0201B05271A004D67D4 = {
-						CreatedOnToolsVersion = 6.3.1;
-					};
-					4681C02B1B05271A004D67D4 = {
 						CreatedOnToolsVersion = 6.3.1;
 					};
 				};
@@ -183,20 +141,9 @@
 			projectRoot = "";
 			targets = (
 				4681C0201B05271A004D67D4 /* ToolTipMenu */,
-				4681C02B1B05271A004D67D4 /* ToolTipMenuTests */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		4681C02A1B05271A004D67D4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4681C01D1B05271A004D67D4 /* Sources */ = {
@@ -209,22 +156,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4681C0281B05271A004D67D4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4681C02F1B05271A004D67D4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4681C0201B05271A004D67D4 /* ToolTipMenu */;
-			targetProxy = 4681C02E1B05271A004D67D4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4681C0331B05271A004D67D4 /* Debug */ = {
@@ -326,40 +258,6 @@
 			};
 			name = Release;
 		};
-		4681C0391B05271A004D67D4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ToolTipMenuTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "cj.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		4681C03A1B05271A004D67D4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ToolTipMenuTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "cj.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -377,15 +275,6 @@
 			buildConfigurations = (
 				4681C0361B05271A004D67D4 /* Debug */,
 				4681C0371B05271A004D67D4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4681C0381B05271A004D67D4 /* Build configuration list for PBXNativeTarget "ToolTipMenuTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4681C0391B05271A004D67D4 /* Debug */,
-				4681C03A1B05271A004D67D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
