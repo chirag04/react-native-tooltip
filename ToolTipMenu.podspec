@@ -15,7 +15,8 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '10.0'
 
   s.source       = { :git => "https://github.com/marcosrdz/react-native-tooltip.git", :tag => "#{s.version}" }
-  s.source_files  = "ios/**/*.{h,m}"
+  s.preserve_paths = '*'
+  s.source_files  = "ToolTipMenu/*.{h,m}"
 
   s.dependency 'React'
 end

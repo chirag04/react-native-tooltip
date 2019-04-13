@@ -4,14 +4,14 @@
   "description": "A react-native wrapper for showing tooltips",
   "main": "ToolTip.ios.js",
   "author": {
-    "name": "Chirag Jain / Marcos Rodriguez",
-    "email": "jain_chirag04@yahoo.com / marcospr@pm.me",
-    "url": "http://chiragjain.tumblr.com / github.com/marcosrdz"
+    "name": "Chirag Jain",
+    "email": "jain_chirag04@yahoo.com",
+    "url": "http://chiragjain.tumblr.com"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:marcosrdz/react-native-tooltip.git"
+    "url": "git@github.com:chirag04/react-native-tooltip.git"
   },
   "keywords": [
     "react",
