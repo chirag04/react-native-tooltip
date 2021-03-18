@@ -4,7 +4,8 @@
  */
 'use strict';
 
-import React from 'react-native';
+import ReactNative from 'react-native';
+import React from 'react';
 import ToolTip from 'react-native-tooltip';
 
 const {
@@ -13,7 +14,7 @@ const {
   Text,
   View,
   AlertIOS,
-} = React;
+} = ReactNative;
 
 const styles = StyleSheet.create({
   container: {
