@@ -9,20 +9,9 @@
 /* Begin PBXBuildFile section */
 		4681C0251B05271A004D67D4 /* ToolTipMenu.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4681C0241B05271A004D67D4 /* ToolTipMenu.h */; };
 		4681C0271B05271A004D67D4 /* ToolTipMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 4681C0261B05271A004D67D4 /* ToolTipMenu.m */; };
-		4681C02D1B05271A004D67D4 /* libToolTipMenu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4681C0211B05271A004D67D4 /* libToolTipMenu.a */; };
 		469F58B71B069FF300C571E8 /* RCTToolTipText.m in Sources */ = {isa = PBXBuildFile; fileRef = 469F58B61B069FF300C571E8 /* RCTToolTipText.m */; };
 		469F58B91B06A00C00C571E8 /* RCTToolTipTextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 469F58B81B06A00C00C571E8 /* RCTToolTipTextManager.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		4681C02E1B05271A004D67D4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4681C0191B05271A004D67D4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4681C0201B05271A004D67D4;
-			remoteInfo = ToolTipMenu;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		4681C01F1B05271A004D67D4 /* CopyFiles */ = {
@@ -53,14 +42,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4681C0291B05271A004D67D4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4681C02D1B05271A004D67D4 /* libToolTipMenu.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,9 +117,6 @@
 					4681C0201B05271A004D67D4 = {
 						CreatedOnToolsVersion = 6.3.1;
 					};
-					4681C02B1B05271A004D67D4 = {
-						CreatedOnToolsVersion = 6.3.1;
-					};
 				};
 			};
 			buildConfigurationList = 4681C01C1B05271A004D67D4 /* Build configuration list for PBXProject "ToolTipMenu" */;
@@ -158,16 +136,6 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		4681C02A1B05271A004D67D4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		4681C01D1B05271A004D67D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -179,22 +147,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4681C0281B05271A004D67D4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4681C02F1B05271A004D67D4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4681C0201B05271A004D67D4 /* ToolTipMenu */;
-			targetProxy = 4681C02E1B05271A004D67D4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4681C0331B05271A004D67D4 /* Debug */ = {
